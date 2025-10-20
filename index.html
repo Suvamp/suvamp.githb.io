@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suvam Patel</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Theme Toggle Switch -->
+    <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="theme-checkbox">
+            <input type="checkbox" id="theme-checkbox">
+            <div class="slider"></div>
+        </label>
+    </div>
+
+    <header>
+        <div class="header-content">
+            <!-- <img src="../images/profile pic.jpg" alt="Suvam Patel" class="profile-img"> -->
+            <div class="header-text">
+                <h1>Suvam Patel</h1>
+                <p class="tagline">GIS Analyst based in Southern California</p>
+            </div>
+        </div>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#work">Work</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>Hey there</h2>
+        <p>I'm a GIS analyst who loves working with satellite imagery and building tools to understand our changing planet. Currently at Riverside County's Office of Economic Development, where I create dashboards and do spatial analysis to help with urban planning decisions.</p>
+        
+        <p>My background is a mix of environmental science (B.A. from UCI), geospatial tech (M.S. from Cal State LA), and data science. I got really into remote sensing during my master's thesis on automated shoreline detection, and I've been hooked ever since.</p>
+
+        <p>When I'm not staring at maps, I'm usually coding in Python, experimenting with machine learning models, or exploring new places with my drone.</p>
+
+        <h3>What I work with</h3>
+        <div class="skills-grid">
+            <span>Python</span>
+            <span>ArcGIS Pro</span>
+            <span>Google Earth Engine</span>
+            <span>QGIS</span>
+            <span>Machine Learning</span>
+            <span>SQL</span>
+            <span>R</span>
+            <span>Remote Sensing</span>
+            <span>JavaScript</span>
+        </div>
+    </section>
+
+    <section id="work">
+        <h2>Experience</h2>
+        
+        <div class="job">
+            <div class="job-header">
+                <h3>GIS Analyst</h3>
+                <span class="date">Nov 2023 - Present</span>
+            </div>
+            <p class="company">County of Riverside, Office of Economic Development</p>
+            <p>Building web dashboards for demographic and economic data, creating site suitability tools for business development, and managing our GIS database. Recently built a housing project dashboard and helped update community facilities district boundaries.</p>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <h3>GIS Specialist</h3>
+                <span class="date">Jun - Nov 2023</span>
+            </div>
+            <p class="company">County of Riverside, Registrar of Voters</p>
+            <p>Improved geoprocessing workflows with Python, updated electoral precincts, and built an election management system. Also helped the team transition from ArcGIS Desktop to Pro.</p>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <h3>Geospatial Analyst</h3>
+                <span class="date">Mar - Aug 2022</span>
+            </div>
+            <p class="company">Sentera</p>
+            <p>Analyzed drone imagery to track corn plant health and growth rates. Used machine learning to count tassels and map weeds across North American and European fields.</p>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <h3>Intern</h3>
+                <span class="date">Feb 2022 - Jan 2023</span>
+            </div>
+            <p class="company">NASA Jet Propulsion Laboratory</p>
+            <p>Worked on the ECOSTRESS project building a wildfire prediction workflow for the Colombian Amazon. Found early indicators of the dry season using plant stress variables.</p>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Selected Projects</h2>
+
+        <div class="project-card">
+            <h3>Automated Shoreline Extraction (Under Peer Review)</h3>
+            <p class="project-meta">Master's Thesis • 2021-2023 <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5354927" target="_blank">View on Google Scholar</a></p>
+            <p>Developed a method to automatically extract shorelines from Planet satellite imagery using supervised classification in Google Earth Engine. Combined this with UAV photogrammetry and GNSS data to map high-water lines along California beaches. Presented the research at AGU Fall Meeting 2022.</p>
+        </div>
+
+        <div class="project-card">
+            <h3>COVID-19 Time Series Forecasting</h3>
+            <p class="project-meta">Personal • <a href="https://github.com/Suvamp/Springboard-Capstone-3" target="_blank">View on GitHub</a></p>
+            <p>Built ARIMA models to forecast COVID-19 cases using Johns Hopkins data. Created interactive Plotly dashboards showing case progression worldwide and across U.S. states.</p>
+        </div>
+
+        <div class="project-card">
+            <h3>El Dorado and Apple Fire Change Detection</h3>
+            <p class="project-meta">Academic • <a href="https://docs.google.com/document/d/1QT8m4PA0OmTmG7QIvuTVSIxr2TTD8AZc/edit" target="_blank">StoryMap</a></p>
+            <p>Used Landsat 8 imagery to detect "burn scars" caused by the El Dorado and Apple Fire in 2020. Calculated the Normalized Burn Ration (NBR) of the images and subtracted the 2020 image from the 2019 image, to get a better assessment of the burn acreage.</p>
+        </div>
+
+        <div class="project-card">
+            <h3>Salton Sea Change Detection</h3>
+            <p class="project-meta">Academic • <a href="https://storymaps.arcgis.com/stories/570a3bedf6514c26bbaa29a60c8576bd" target="_blank">StoryMap</a></p>
+            <p>Tracked the shrinking of the Salton Sea over time using Landsat imagery and assessed health impacts on surrounding communities from increased dust exposure.</p>
+        </div>
+
+        <div class="project-card">
+            <h3>Climate Impact on Soil Moisture</h3>
+            <p class="project-meta">Personal • <a href="https://github.com/Suvamp/Project-Analysis-of-surface-air-temperature-effect-on-soil-moisture-andevapotranspiration-rate" target="_blank">GitHub</a></p>
+            <p>Analyzed CMIP-6 climate data to visualize global trends in temperature, soil moisture, and evapotranspiration rates.</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Let's talk</h2>
+        <p>I'm always up for chatting about GIS, remote sensing, or potential collaborations. Feel free to reach out.</p>
+        
+        <div class="contact-links">
+            <a href="https://www.linkedin.com/in/suvam-patel-997543195/" target="_blank">LinkedIn</a>
+            <a href="https://github.com/Suvamp?tab=repositories" target="_blank">GitHub</a>
+            <a href="https://arcg.is/1aXHSq2" target="_blank">StoryMaps</a>
+        </div>
+        
+        <p class="phone">Phone: (909) 663-7562</p>
+        <p class="email">Email: patelsuvam621@gmail.com</p>
+    </section>
+
+    <footer>
+        <p>Built from scratch • Suvam Patel • 2025</p>
+    </footer>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
