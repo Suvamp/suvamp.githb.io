@@ -57,7 +57,7 @@ portfolio/
 
 1. **Clone or download the repository**
    ```bash
-   git clone https://github.com/yourusername/portfolio.git
+   git clone https://github.com/Suvamp/suvamp.githb.io.git
    cd portfolio
    ```
 
