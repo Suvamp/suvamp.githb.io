@@ -1,56 +1,60 @@
-// ===========================
-// THEME TOGGLE FUNCTIONALITY
-// ===========================
-
-// Get the theme toggle checkbox
-const themeCheckbox = document.getElementById('theme-checkbox');
-
-// Check for saved theme preference or default to 'light' mode
-const currentTheme = localStorage.getItem('theme') || 'light';
-
-// Apply the saved theme on page load
-if (currentTheme === 'dark') {
-    document.body.classList.add('dark-mode');
-    themeCheckbox.checked = true;
+// Nav scroll
+const nav = document.getElementById('main-nav');
+if (nav) {
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 20);
+  }, { passive: true });
 }
 
-// Toggle theme when checkbox is changed
-themeCheckbox.addEventListener('change', () => {
-    // Toggle the dark-mode class on the body
-    document.body.classList.toggle('dark-mode');
-    
-    // Determine the current theme
-    let theme = 'light';
-    if (document.body.classList.contains('dark-mode')) {
-        theme = 'dark';
-    }
-    
-    // Save the theme preference to localStorage
-    localStorage.setItem('theme', theme);
-});
+// Mobile menu
+const menuBtn = document.getElementById('mobile-menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+if (menuBtn && mobileMenu) {
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('open');
+  });
+  mobileMenu.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => mobileMenu.classList.remove('open'));
+  });
+}
 
-// ===========================
-// SMOOTH SCROLLING
-// ===========================
-
-// Add smooth scrolling to all anchor links
+// Smooth scroll with nav offset
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
-    });
+  anchor.addEventListener('click', function(e) {
+    const target = document.querySelector(this.getAttribute('href'));
+    if (!target) return;
+    e.preventDefault();
+    const offset = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--nav-h')) || 60;
+    window.scrollTo({ top: target.offsetTop - offset - 12, behavior: 'smooth' });
+  });
 });
 
-// ===========================
-// CONSOLE EASTER EGG
-// ===========================
+// Fade-in on scroll
+const fadeEls = document.querySelectorAll('.fade-in');
+if ('IntersectionObserver' in window) {
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        entry.target.style.transitionDelay = `${i * 60}ms`;
+        entry.target.classList.add('visible');
+        obs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.07 });
+  fadeEls.forEach(el => obs.observe(el));
+} else {
+  fadeEls.forEach(el => el.classList.add('visible'));
+}
 
-console.log('%c👋 Hey there!', 'font-size: 20px; color: #3182ce; font-weight: bold;');
-console.log('%cThanks for checking out the code!', 'font-size: 14px; color: #4a5568;');
-console.log('%c🔗 GitHub: https://github.com/Suvamp', 'font-size: 12px; color: #718096;');
+// Project filter
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const filter = btn.dataset.filter;
+    document.querySelectorAll('.table-row').forEach(row => {
+      const cats = row.dataset.category.split(' ');
+      row.classList.toggle('hidden', filter !== 'all' && !cats.includes(filter));
+    });
+  });
+});

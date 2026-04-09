@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects — Suvam Patel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,700;1,9..144,300;1,9..144,500&family=Plus+Jakarta+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <nav id="main-nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Suvam Patel</a>
+      <div class="nav-links">
+        <a href="index.html#about">About</a>
+        <a href="index.html#work">Work</a>
+        <a href="index.html#experience">Experience</a>
+        <a href="projects.html" class="active">Projects</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="index.html#about">About</a>
+    <a href="index.html#work">Work</a>
+    <a href="index.html#experience">Experience</a>
+    <a href="projects.html">Projects</a>
+    <a href="index.html#contact">Contact</a>
+  </div>
+
+  <section class="archive-section">
+    <div class="container">
+      <div class="archive-header fade-in">
+        <h1>All Projects</h1>
+        <p>A full catalog spanning GIS, remote sensing, machine learning, and web development.</p>
+        <div class="filter-controls">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="geospatial">Geospatial</button>
+          <button class="filter-btn" data-filter="ml">ML / Data Science</button>
+          <button class="filter-btn" data-filter="web">Web / Full-Stack</button>
+        </div>
+      </div>
+
+      <div class="project-table" id="projects-grid">
+
+        <div class="table-row fade-in" data-category="geospatial ml">
+          <div class="table-meta">
+            <span class="table-tag">Remote Sensing</span>
+            <span class="table-tag tag-green">Published</span>
+          </div>
+          <div class="table-content">
+            <h3>Automated Shoreline Extraction from PlanetScope Imagery</h3>
+            <p>Supervised ML classification in Google Earth Engine to auto-extract high-water shorelines along California beaches. Validated with UAV photogrammetry and GNSS field surveys. Published in <em>Int'l Journal of Applied Earth Observation and Geoinformation</em>.</p>
+            <div class="table-stack">Python · GEE · Random Forest · PlanetScope · UAV</div>
+          </div>
+          <div class="table-links">
+            <a href="https://www.sciencedirect.com/science/article/pii/S1569843226000890" target="_blank">Paper ↗</a>
+          </div>
+        </div>
+
+        <div class="table-row fade-in" data-category="geospatial ml">
+          <div class="table-meta">
+            <span class="table-tag">Remote Sensing</span>
+            <span class="table-tag tag-amber">NASA JPL</span>
+          </div>
+          <div class="table-content">
+            <h3>Wildfire Prediction Workflow — Colombian Amazon</h3>
+            <p>Built a wildfire risk pipeline at NASA JPL using ECOSTRESS plant stress data to detect early dry-season fire risk indicators in the Colombian Amazon.</p>
+            <div class="table-stack">Python · ECOSTRESS · NASA Earthdata</div>
+          </div>
+          <div class="table-links">
+            <span class="table-org">NASA JPL</span>
+          </div>
+        </div>
+
+        <div class="table-row fade-in" data-category="ml">
+          <div class="table-meta">
+            <span class="table-tag">ML · Time Series</span>
+          </div>
+          <div class="table-content">
+            <h3>COVID-19 Forecasting &amp; Interactive Dashboard</h3>
+            <p>ARIMA models on Johns Hopkins data with interactive Plotly dashboards — global and U.S. state-level drill-down views.</p>
+            <div class="table-stack">Python · ARIMA · Plotly · statsmodels · pandas</div>
+          </div>
+          <div class="table-links">
+            <a href="https://github.com/Suvamp/Springboard-Capstone-3" target="_blank">GitHub ↗</a>
+          </div>
+        </div>
+
+        <div class="table-row fade-in" data-category="geospatial ml">
+          <div class="table-meta">
+            <span class="table-tag">Spatial Economics</span>
+            <span class="table-tag tag-amber">Applied</span>
+          </div>
+          <div class="table-content">
+            <h3>Commercial Opportunity Zone Analysis — Riverside County</h3>
+            <p>Full spatial statistics pipeline across 438 census tracts: Moran's I (0.68), LISA cluster mapping, K-Means segmentation into 6 corridor types, and GWR revealing spatial non-stationarity in the Coachella Valley. ~70% of HUD Opportunity Zone tracts independently validated by the composite score.</p>
+            <div class="table-stack">Python · GeoPandas · PySAL · OSMnx · mgwr · scikit-learn · Folium · Census API</div>
+          </div>
+          <div class="table-links">
+            <a href="https://suvamp.github.io/riverside-county-economic-opportunity/outputs/riverside_opportunity_map.html" target="_blank">Live map ↗</a>
+            <a href="https://github.com/Suvamp/riverside-county-economic-opportunity" target="_blank" style="display:block;margin-top:8px">GitHub ↗</a>
+          </div>
+        </div>
+
+        <div class="table-row fade-in" data-category="geospatial">
+          <div class="table-meta">
+            <span class="table-tag">GIS · Flood Risk</span>
+          </div>
+          <div class="table-content">
+            <h3>Urban Flood Risk Assessment — Harris County, TX</h3>
+            <p>Flood risk analysis integrating elevation, land use, and hydrological data to identify high-risk zones and vulnerable populations for emergency planning.</p>
+            <div class="table-stack">ArcGIS Pro · Spatial Analysis · Python</div>
+          </div>
+          <div class="table-links">
+            <a href="https://suvamp.github.io/urban-flood-risk-harris-county/outputs/flood_vulnerability_harris_county.html" target="_blank">Live map ↗</a>
+            <a href="https://github.com/Suvamp/urban-flood-risk-harris-county" target="_blank">GitHub ↗</a>
+          </div>
+        </div>
+
+        <div class="table-row fade-in" data-category="geospatial ml">
+          <div class="table-meta">
+            <span class="table-tag">GIS · Site Suitability</span>
+            <span class="table-tag tag-amber">API</span>
+          </div>
+          <div class="table-content">
+            <h3>EV Charging Site Suitability — California</h3>
+            <p>Multi-criteria analysis for optimal EV charging deployment across all 58 California counties, with a FastAPI backend and an ArcGIS Maps SDK choropleth frontend with live weight sliders.</p>
+            <div class="table-stack">FastAPI · Python · ArcGIS Maps SDK · Census API · AFDC</div>
+          </div>
+          <div class="table-links">
+            <a href="https://drive.google.com/file/d/1-9dDOX4KlTbAX_Nhvs55E2ekhkO6lzM5/view" target="_blank">Site Map ↗</a>
+            <a href="https://github.com/Suvamp/ev-charging-suitability-ca" target="_blank">GitHub ↗</a>
+          </div>
+        </div>
+
+        <div class="table-row fade-in" data-category="web">
+          <div class="table-meta">
+            <span class="table-tag">Full-Stack · Database</span>
+          </div>
+          <div class="table-content">
+            <h3>Music Festival Management System</h3>
+            <p>Full-stack CRUD app managing festival operations — artists, venues, events, ticket sales. Node.js, Express, MySQL, Handlebars.</p>
+            <div class="table-stack">Node.js · MySQL · Express · Handlebars</div>
+          </div>
+          <div class="table-links">
+            <a href="https://github.com/Suvamp/music-festival-management-cs340" target="_blank">GitHub ↗</a>
+          </div>
+        </div>
+
+        <div class="table-row fade-in" data-category="geospatial ml">
+          <div class="table-meta">
+            <span class="table-tag">Remote Sensing</span>
+          </div>
+          <div class="table-content">
+            <h3>El Dorado &amp; Apple Fire Change Detection</h3>
+            <p>Landsat 8 NBR differencing to map 2020 California wildfire burn scars and quantify affected acreage.</p>
+            <div class="table-stack">Landsat 8 · NBR Analysis · ArcGIS</div>
+          </div>
+          <div class="table-links">
+            <a href="https://docs.google.com/document/d/1QT8m4PA0OmTmG7QIvuTVSIxr2TTD8AZc/edit" target="_blank">Report ↗</a>
+          </div>
+        </div>
+
+        <div class="table-row fade-in" data-category="geospatial">
+          <div class="table-meta">
+            <span class="table-tag">Remote Sensing · Environmental</span>
+          </div>
+          <div class="table-content">
+            <h3>Salton Sea Change Detection</h3>
+            <p>Multi-temporal Landsat analysis tracking the Salton Sea's decline over decades, with a health impact assessment on surrounding communities.</p>
+            <div class="table-stack">Landsat · Change Detection · ArcGIS StoryMaps</div>
+          </div>
+          <div class="table-links">
+            <a href="https://storymaps.arcgis.com/stories/570a3bedf6514c26bbaa29a60c8576bd" target="_blank">StoryMap ↗</a>
+          </div>
+        </div>
+
+        <div class="table-row fade-in" data-category="ml">
+          <div class="table-meta">
+            <span class="table-tag">Climate Science</span>
+          </div>
+          <div class="table-content">
+            <h3>Climate Impact on Soil Moisture</h3>
+            <p>CMIP-6 global climate data analysis visualizing multi-decadal trends in surface temperature, soil moisture, and evapotranspiration under varying emission scenarios.</p>
+            <div class="table-stack">Python · CMIP-6 · NetCDF · Matplotlib</div>
+          </div>
+          <div class="table-links">
+            <a href="https://github.com/Suvamp/Project-Analysis-of-surface-air-temperature-effect-on-soil-moisture-andevapotranspiration-rate" target="_blank">GitHub ↗</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-inner">
+      <span>Suvam Patel</span>
+      <span>Riverside County, CA</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

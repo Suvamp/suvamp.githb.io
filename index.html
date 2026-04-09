@@ -1,168 +1,334 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Suvam Patel</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Suvam Patel — GIS Analyst</title>
+  <meta name="description" content="GIS Analyst building ML-powered spatial tools. Based in Riverside County, CA." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,700;1,9..144,300;1,9..144,500&family=Plus+Jakarta+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <!-- Theme Toggle Switch -->
-    <div class="theme-switch-wrapper">
-        <label class="theme-switch" for="theme-checkbox">
-            <input type="checkbox" id="theme-checkbox" />
-            <div class="slider"></div>
-        </label>
+
+  <!-- Nav -->
+  <nav id="main-nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Suvam Patel</a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="#experience">Experience</a>
+        <a href="projects.html">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
+  </nav>
 
-    <header>
-        <div class="header-content">
-            <!-- <img src="../images/profile pic.jpg" alt="Suvam Patel" class="profile-img"> -->
-            <div class="header-text">
-                <h1>Suvam Patel</h1>
-                <p class="tagline">GIS Analyst based in Southern California</p>
-            </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#about">About</a>
+    <a href="#work">Work</a>
+    <a href="#experience">Experience</a>
+    <a href="projects.html">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <!-- Hero -->
+  <section id="hero">
+    <div class="hero-inner">
+      <div class="hero-eyebrow">GIS &amp; Machine Learning</div>
+      <h1 class="hero-name">
+        Suvam<br />
+        <em>Patel</em>
+      </h1>
+      <p class="hero-sub">
+        I build tools that help people understand places —
+        combining satellite data, spatial analysis, and machine learning
+        to turn raw geography into something useful.
+      </p>
+      <div class="hero-cta">
+        <a href="#work" class="btn-primary">See my work</a>
+        <a href="projects.html" class="btn-ghost">Browse all projects</a>
+      </div>
+    </div>
+    <div class="hero-rule"></div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <div class="container about-grid">
+      <div class="about-sidebar fade-in">
+        <p class="sidebar-item">B.A. Environmental Science<br /><span>UC Irvine</span></p>
+        <p class="sidebar-item">M.S. Geospatial Technology<br /><span>Cal State LA</span></p>
+        <p class="sidebar-item">Computer Science<br /><span>Oregon State (in progress)</span></p>
+        <p class="sidebar-item">Currently at<br /><span>Riverside County, OED</span></p>
+      </div>
+      <div class="about-body fade-in">
+        <h2>About me</h2>
+        <p>
+          My path into GIS started with an environmental science degree and a lot of time
+          outdoors. The further I got into remote sensing and satellite analysis, the more
+          I wanted to understand the computational side — which led to my master's research
+          on automated shoreline detection, a publication in a peer-reviewed journal,
+          and a stint at NASA's Jet Propulsion Laboratory working on wildfire risk in
+          the Colombian Amazon.
+        </p>
+        <p>
+          These days I'm a GIS Analyst at Riverside County's Office of Economic Development,
+          where I build dashboards and spatial tools that support real land use and economic
+          decisions. I'm also finishing a CS post-baccalaureate at Oregon State — mostly
+          because I want to understand what's actually happening inside the models I use.
+        </p>
+        <p>
+          My interest is at the intersection where spatial data meets machine learning.
+          I like problems where the geography matters — where a result in one place
+          genuinely differs from a result two miles away, and you need to account for that.
+        </p>
+        <div class="skills-prose">
+          <p>
+            <strong>Tools I reach for:</strong> Python, ArcGIS Pro, Google Earth Engine,
+            scikit-learn, PostgreSQL, JavaScript. I've also worked extensively with
+            drone imagery, GNSS surveying, and the Census and AFDC APIs for
+            demographic and infrastructure analysis.
+          </p>
         </div>
-        <nav>
-            <a href="#about">About</a>
-            <a href="#work">Work</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
+      </div>
+    </div>
+  </section>
 
-    <section id="about">
-        <h2>Hey there</h2>
-        <p>I'm a GIS analyst who loves working with satellite imagery and building tools to understand our changing planet. Currently at Riverside County's Office of Economic Development, where I create dashboards and do spatial analysis to help with urban planning decisions.</p>
-        
-        <p>My background is a mix of environmental science (B.A. from UCI), geospatial tech (M.S. from Cal State LA), and data science. I got into remote sensing during my master's thesis on automated shoreline detection, and I've been hooked ever since.</p>
+  <!-- Work -->
+  <section id="work">
+    <div class="container">
+      <h2 class="section-heading fade-in">Selected work</h2>
 
-        <p>When I'm not staring at maps, I'm usually coding in Python, experimenting with machine learning models, or exploring new places with my drone.</p>
-
-        <h3>What I work with</h3>
-        <div class="skills-grid">
-            <span>Python</span>
-            <span>ArcGIS Pro</span>
-            <span>Google Earth Engine</span>
-            <span>QGIS</span>
-            <span>Machine Learning</span>
-            <span>SQL</span>
-            <span>R</span>
-            <span>Remote Sensing</span>
-            <span>JavaScript</span>
+      <!-- Project 01 -->
+      <article class="project-block fade-in">
+        <div class="project-header">
+          <div class="project-meta-line">
+            <span class="project-tag">Published research</span>
+            <span class="project-tag tag-green">Peer-reviewed</span>
+          </div>
+          <h3>Automated Shoreline Extraction<br />from Satellite Imagery</h3>
         </div>
-    </section>
+        <div class="project-body">
+          <div class="project-description">
+            <p>
+              For my master's thesis I built a machine learning pipeline in Google Earth Engine
+              to automatically map high-water shorelines from PlanetScope satellite imagery —
+              the kind of work that used to require researchers walking beaches with GPS units.
+              I validated results using UAV photogrammetry and GNSS surveys I conducted myself.
+            </p>
+            <p>
+              The paper was published in the <em>International Journal of Applied Earth
+              Observation and Geoinformation</em>, and I presented the research at AGU Fall
+              Meeting 2022 in Chicago.
+            </p>
+            <div class="project-stack">Python · Google Earth Engine · Random Forest · PlanetScope · UAV · GNSS</div>
+          </div>
+          <div class="project-links">
+            <a href="https://www.sciencedirect.com/science/article/pii/S1569843226000890" target="_blank" class="project-link">
+              Read the paper ↗
+            </a>
+          </div>
+        </div>
+      </article>
 
-    <section id="work">
-        <h2>Experience</h2>
-        
-        <div class="job">
-            <div class="job-header">
-                <h3>GIS Analyst</h3>
-                <span class="date">Nov 2023 - Present</span>
-            </div>
-            <p class="company">County of Riverside, Office of Economic Development</p>
-            <p>Building web dashboards for demographic and economic data, creating site suitability tools for business development, and managing our GIS database. Recently built a housing project dashboard and helped update community facilities district boundaries.</p>
+      <!-- Project 02 -->
+      <article class="project-block fade-in">
+        <div class="project-header">
+          <div class="project-meta-line">
+            <span class="project-tag">NASA JPL</span>
+            <span class="project-tag">Remote sensing</span>
+          </div>
+          <h3>Wildfire Risk Detection<br />in the Colombian Amazon</h3>
+        </div>
+        <div class="project-body">
+          <div class="project-description">
+            <p>
+              During my internship at JPL I worked on the ECOSTRESS mission — a thermal
+              imaging instrument on the International Space Station that measures plant
+              water stress. I built a workflow to detect early dry-season fire risk
+              in the Colombian Amazon by identifying vegetation stress signatures
+              before conditions become dangerous.
+            </p>
+            <p>
+              This was the project that convinced me remote sensing has genuine
+              operational value, not just research value.
+            </p>
+            <div class="project-stack">Python · ECOSTRESS · NASA Earthdata · Predictive Analytics</div>
+          </div>
+          <div class="project-links">
+            <span class="project-link-org">NASA Jet Propulsion Laboratory — ECOSTRESS Project</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 03 -->
+      <article class="project-block fade-in">
+        <div class="project-header">
+          <div class="project-meta-line">
+            <span class="project-tag">Geospatial · Economics</span>
+            <span class="project-tag tag-amber">Applied research</span>
+          </div>
+          <h3>Commercial Opportunity Zone Analysis<br />— Riverside County</h3>
+        </div>
+        <div class="project-body">
+          <div class="project-description">
+            <p>
+              Working in Riverside County's economic development office gave me access
+              to questions I could actually test. This analysis pipelines Census ACS data,
+              OpenStreetMap commercial POIs, and HUD Opportunity Zone designations through
+              a spatial statistics workflow across all 438 county census tracts.
+            </p>
+            <p>
+              Moran's I of 0.68 confirmed that commercial activity clusters geographically
+              — which matters for where you place investment. GWR revealed that the standard
+              income-to-business-density relationship breaks down in the Coachella Valley,
+              where tourism-driven demand operates independently of local income. Six distinct
+              economic corridor types emerged from K-Means clustering. About 70% of HUD
+              Opportunity Zone tracts independently landed in the top tercile of the
+              data-driven score — a useful validation of the federal designations.
+            </p>
+            <div class="project-stack">Python · GeoPandas · PySAL · OSMnx · mgwr · scikit-learn · Folium · Census API</div>
+          </div>
+          <div class="project-links">
+            <a href="https://suvamp.github.io/riverside-county-economic-opportunity/outputs/riverside_opportunity_map.html" target="_blank" class="project-link">
+              Live map ↗
+            </a>
+            <a href="https://github.com/Suvamp/riverside-county-economic-opportunity" target="_blank" class="project-link">
+              GitHub ↗
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 05 -->
+      <article class="project-block fade-in">
+        <div class="project-header">
+          <div class="project-meta-line">
+            <span class="project-tag">GIS · Site Suitability</span>
+            <span class="project-tag tag-amber">Live API</span>
+          </div>
+          <h3>EV Charging Site Suitability API<br />— California</h3>
+        </div>
+        <div class="project-body">
+          <div class="project-description">
+            <p>
+              Turned a static GIS suitability analysis into a working REST API. The FastAPI
+              backend scores all 58 California counties in real time across four factors —
+              population density, highway access, existing station gaps, and income equity
+              — using min-max normalized multi-criteria analysis. Weights are user-adjustable.
+            </p>
+            <p>
+              The frontend is an ArcGIS Maps SDK choropleth map with live weight sliders
+              and a county detail panel showing both composite scores and raw data.
+              Auto-generated Swagger docs ship at <code>/docs</code>.
+              Deployed on Render.
+            </p>
+            <div class="project-stack">FastAPI · Python · Pydantic · ArcGIS Maps SDK 4.29 · Census API · AFDC</div>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/Suvamp/ev-charging-suitability-ca" target="_blank" class="project-link">
+              GitHub ↗
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <div class="all-projects-row fade-in">
+        <a href="projects.html" class="btn-ghost">View all projects →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience">
+    <div class="container">
+      <h2 class="section-heading fade-in">Experience</h2>
+      <div class="experience-list">
+
+        <div class="exp-item fade-in">
+          <div class="exp-left">
+            <div class="exp-role">GIS Analyst</div>
+            <div class="exp-org">County of Riverside<br />Office of Economic Development</div>
+            <div class="exp-date">Nov 2023 – Present</div>
+          </div>
+          <div class="exp-right">
+            <p>Building web dashboards for demographic and economic data, site suitability tools for business development, and managing GIS databases. Built a housing project dashboard and helped update community facilities district boundaries.</p>
+            <div class="exp-tags">ArcGIS Online · Python · Dashboards · Economic Analysis</div>
+          </div>
         </div>
 
-        <div class="job">
-            <div class="job-header">
-                <h3>GIS Specialist</h3>
-                <span class="date">Jun - Nov 2023</span>
-            </div>
-            <p class="company">County of Riverside, Registrar of Voters</p>
-            <p>Improved geoprocessing workflows with Python, updated electoral precincts, and built an election management system. Also helped the team transition from ArcGIS Desktop to Pro.</p>
+        <div class="exp-item fade-in">
+          <div class="exp-left">
+            <div class="exp-role">GIS Specialist</div>
+            <div class="exp-org">County of Riverside<br />Registrar of Voters</div>
+            <div class="exp-date">Jun – Nov 2023</div>
+          </div>
+          <div class="exp-right">
+            <p>Automated geoprocessing workflows with Python, updated electoral precinct boundaries, built an election management system, and led the team's migration from ArcGIS Desktop to Pro.</p>
+            <div class="exp-tags">Python · ArcGIS Pro · Workflow Automation</div>
+          </div>
         </div>
 
-        <div class="job">
-            <div class="job-header">
-                <h3>Geospatial Analyst</h3>
-                <span class="date">Mar - Aug 2022</span>
-            </div>
-            <p class="company">Sentera</p>
-            <p>Analyzed drone imagery to track corn plant health and growth rates. Used machine learning to count tassels and map weeds across North American and European fields.</p>
+        <div class="exp-item fade-in">
+          <div class="exp-left">
+            <div class="exp-role">Geospatial Analyst</div>
+            <div class="exp-org">Sentera</div>
+            <div class="exp-date">Mar – Aug 2022</div>
+          </div>
+          <div class="exp-right">
+            <p>Analyzed drone imagery to track corn plant health across fields in North America and Europe. Applied ML models to count tassels and map weeds at scale — my first real exposure to production ML pipelines.</p>
+            <div class="exp-tags">Machine Learning · UAV Imagery · Python · Precision Agriculture</div>
+          </div>
         </div>
 
-        <div class="job">
-            <div class="job-header">
-                <h3>Intern</h3>
-                <span class="date">Feb 2022 - Jan 2023</span>
-            </div>
-            <p class="company">NASA Jet Propulsion Laboratory</p>
-            <p>Worked on the ECOSTRESS project building a wildfire prediction workflow for the Colombian Amazon. Found early indicators of the dry season using plant stress variables.</p>
-        </div>
-    </section>
-
-    <section id="projects">
-        <h2>Selected Projects</h2>
-
-        <div class="project-card">
-            <h3>Automated Shoreline Extraction (Published)</h3>
-            <p class="project-meta">Master's Thesis • 2021-2023 <a href="https://www.sciencedirect.com/science/article/pii/S1569843226000890" target="_blank">View on The International Journal of Applied Earth Observation and Geoinformation</a></p>
-            <p>Developed a method to automatically extract shorelines from Planet satellite imagery using supervised classification in Google Earth Engine. Combined this with UAV photogrammetry and GNSS data to map high-water lines along California beaches. Presented the research at AGU Fall Meeting 2022.</p>
+        <div class="exp-item fade-in">
+          <div class="exp-left">
+            <div class="exp-role">Research Intern</div>
+            <div class="exp-org highlight-org">NASA Jet Propulsion Laboratory</div>
+            <div class="exp-date">Feb 2022 – Jan 2023</div>
+          </div>
+          <div class="exp-right">
+            <p>Contributed to the ECOSTRESS science team, developing a wildfire prediction workflow for the Colombian Amazon using plant stress variables derived from thermal satellite data.</p>
+            <div class="exp-tags">ECOSTRESS · Remote Sensing · Python</div>
+          </div>
         </div>
 
-         <div class="project-card">
-            <h3>Urban Flood Risk Assessment - Harris County, Texas</h3>
-            <p class="project-meta">Academic • <a href="https://github.com/Suvamp/urban-flood-risk-harris-county" target="_blank">View on GitHub</a></p>
-            <p>Conducted comprehensive flood risk analysis for Harris County using GIS spatial analysis techniques. Integrated elevation data, land use patterns, and hydrological features to identify high-risk flood zones and vulnerable populations for emergency planning and mitigation strategies.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="container">
+      <div class="contact-inner fade-in">
+        <h2>Get in touch</h2>
+        <p>
+          Open to roles where spatial analysis and machine learning intersect —
+          whether that's in local government, tech, or research. Happy to talk.
+        </p>
+        <div class="contact-row">
+          <a href="mailto:patelsuvam621@gmail.com" class="contact-item">patelsuvam621@gmail.com</a>
+          <a href="https://www.linkedin.com/in/suvam-patel-997543195/" target="_blank" class="contact-item">LinkedIn</a>
+          <a href="https://github.com/Suvamp" target="_blank" class="contact-item">GitHub</a>
+          <a href="https://arcg.is/1aXHSq2" target="_blank" class="contact-item">ArcGIS StoryMaps</a>
         </div>
+      </div>
+    </div>
+  </section>
 
-        <div class="project-card">
-            <h3>EV Charging Station Suitability Analysis - California</h3>
-            <p class="project-meta">Academic • <a href="https://github.com/Suvamp/ev-charging-suitability-ca" target="_blank">View on GitHub</a></p>
-            <p>Performed site suitability analysis for electric vehicle charging infrastructure across California. Applied multi-criteria decision analysis using ArcGIS to evaluate locations based on population density, traffic patterns, existing infrastructure, and accessibility to identify optimal charging station placement.</p>
-        </div>
+  <footer>
+    <div class="container footer-inner">
+      <span>Suvam Patel</span>
+      <span>Riverside County, CA</span>
+    </div>
+  </footer>
 
-        <div class="project-card">
-            <h3>Music Festival Management Database System</h3>
-            <p class="project-meta">Academic • <a href="https://github.com/Suvamp/music-festival-management-cs340" target="_blank">View on GitHub</a></p>
-            <p>Built a full-stack web application for managing music festival operations including artists, venues, events, and ticket sales. Implemented using Node.js, Express, MySQL, and Handlebars with CRUD operations and complex SQL queries for data management and reporting.</p>
-        </div>
-
-        <div class="project-card">
-            <h3>COVID-19 Time Series Forecasting</h3>
-            <p class="project-meta">Personal • <a href="https://github.com/Suvamp/Springboard-Capstone-3" target="_blank">View on GitHub</a></p>
-            <p>Built ARIMA models to forecast COVID-19 cases using Johns Hopkins data. Created interactive Plotly dashboards showing case progression worldwide and across U.S. states.</p>
-        </div>
-
-        <div class="project-card">
-            <h3>El Dorado and Apple Fire Change Detection</h3>
-            <p class="project-meta">Academic • <a href="https://docs.google.com/document/d/1QT8m4PA0OmTmG7QIvuTVSIxr2TTD8AZc/edit" target="_blank">StoryMap</a></p>
-            <p>Used Landsat 8 imagery to detect "burn scars" caused by the El Dorado and Apple Fire in 2020. Calculated the Normalized Burn Ration (NBR) of the images and subtracted the 2020 image from the 2019 image, to get a better assessment of the burn acreage.</p>
-        </div>
-
-        <div class="project-card">
-            <h3>Salton Sea Change Detection</h3>
-            <p class="project-meta">Academic • <a href="https://storymaps.arcgis.com/stories/570a3bedf6514c26bbaa29a60c8576bd" target="_blank">StoryMap</a></p>
-            <p>Tracked the shrinking of the Salton Sea over time using Landsat imagery and assessed health impacts on surrounding communities from increased dust exposure.</p>
-        </div>
-
-        <div class="project-card">
-            <h3>Climate Impact on Soil Moisture</h3>
-            <p class="project-meta">Personal • <a href="https://github.com/Suvamp/Project-Analysis-of-surface-air-temperature-effect-on-soil-moisture-andevapotranspiration-rate" target="_blank">GitHub</a></p>
-            <p>Analyzed CMIP-6 climate data to visualize global trends in temperature, soil moisture, and evapotranspiration rates.</p>
-        </div>
-    </section>
-
-    <section id="contact">
-        <h2>Let's talk</h2>
-        <p>I'm always up for chatting about GIS, remote sensing, or potential collaborations. Feel free to reach out.</p>
-        
-        <div class="contact-links">
-            <a href="https://www.linkedin.com/in/suvam-patel-997543195/" target="_blank">LinkedIn</a>
-            <a href="https://github.com/Suvamp?tab=repositories" target="_blank">GitHub</a>
-            <a href="https://arcg.is/1aXHSq2" target="_blank">StoryMaps</a>
-        </div>
-        
-        <p class="phone">Phone: (909) 663-7562</p>
-        <p class="email">Email: patelsuvam621@gmail.com</p>
-    </section>
-
-    <footer>
-        <p>Built from scratch • Suvam Patel • 2025</p>
-    </footer>
-
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
