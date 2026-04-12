@@ -171,35 +171,39 @@
       <article class="project-block fade-in">
         <div class="project-header">
           <div class="project-meta-line">
-            <span class="project-tag">Geospatial · Economics</span>
-            <span class="project-tag tag-amber">Applied research</span>
+            <span class="project-tag">Spatial ML · Emergency Management</span>
+            <span class="project-tag tag-amber">Live dashboard</span>
           </div>
-          <h3>Commercial Opportunity Zone Analysis<br />— Riverside County</h3>
+          <h3>Flood Risk Intelligence Dashboard<br />— Harris County, TX</h3>
         </div>
         <div class="project-body">
           <div class="project-description">
             <p>
-              Working in Riverside County's economic development office gave me access
-              to questions I could actually test. This analysis pipelines Census ACS data,
-              OpenStreetMap commercial POIs, and HUD Opportunity Zone designations through
-              a spatial statistics workflow across all 438 county census tracts.
+              Harris County floods more than almost anywhere in the U.S. This project
+              started as a census tract–level vulnerability analysis and grew into a
+              full-stack deployed dashboard. The pipeline ingests FEMA NFHL flood zones,
+              USGS 3DEP elevation, NLCD impervious surface, NHD waterways, and Census ACS
+              demographics — then runs a Random Forest classifier across 2,830 block groups
+              with SHAP explainability for each prediction.
             </p>
             <p>
-              Moran's I of 0.68 confirmed that commercial activity clusters geographically
-              — which matters for where you place investment. GWR revealed that the standard
-              income-to-business-density relationship breaks down in the Coachella Valley,
-              where tourism-driven demand operates independently of local income. Six distinct
-              economic corridor types emerged from K-Means clustering. About 70% of HUD
-              Opportunity Zone tracts independently landed in the top tercile of the
-              data-driven score — a useful validation of the federal designations.
+              The deployed dashboard lets you click any block group and see exactly
+              which features drove its risk score. R² of 0.9585 on the regression model.
+              Global Moran's I of 0.3916 confirmed significant spatial clustering along
+              the Buffalo Bayou and Brays Bayou corridors. High-risk tracts carry a
+              mean poverty rate nearly 2.5× that of low-risk tracts — the environmental
+              justice signal is hard to miss.
             </p>
-            <div class="project-stack">Python · GeoPandas · PySAL · OSMnx · mgwr · scikit-learn · Folium · Census API</div>
+            <div class="project-stack">Python · scikit-learn · SHAP · FastAPI · ArcGIS Maps SDK 4.29 · GeoPandas · PySAL · Folium · FEMA NFHL · USGS 3DEP</div>
           </div>
           <div class="project-links">
-            <a href="https://suvamp.github.io/riverside-county-economic-opportunity/outputs/riverside_opportunity_map.html" target="_blank" class="project-link">
-              Live map ↗
+            <a href="https://flood-risk-dashboard-wdjy.onrender.com/" target="_blank" class="project-link">
+              Live dashboard ↗
             </a>
-            <a href="https://github.com/Suvamp/riverside-county-economic-opportunity" target="_blank" class="project-link">
+            <a href="https://suvamp.github.io/urban-flood-risk-harris-county/outputs/flood_vulnerability_harris_county.html" target="_blank" class="project-link">
+              Folium map ↗
+            </a>
+            <a href="https://github.com/Suvamp/urban-flood-risk-harris-county" target="_blank" class="project-link">
               GitHub ↗
             </a>
           </div>
@@ -227,14 +231,54 @@
               The frontend is an ArcGIS Maps SDK choropleth map with live weight sliders
               and a county detail panel showing both composite scores and raw data.
               Auto-generated Swagger docs ship at <code>/docs</code>.
+              Deployed on Render.
             </p>
             <div class="project-stack">FastAPI · Python · Pydantic · ArcGIS Maps SDK 4.29 · Census API · AFDC</div>
           </div>
           <div class="project-links">
-            <a href="https://drive.google.com/file/d/1-9dDOX4KlTbAX_Nhvs55E2ekhkO6lzM5/view" target="_blank" class="project-link">
-                Site Map ↗
-            </a>
             <a href="https://github.com/Suvamp/ev-charging-suitability-ca" target="_blank" class="project-link">
+              GitHub ↗
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 05 -->
+      <article class="project-block fade-in">
+        <div class="project-header">
+          <div class="project-meta-line">
+            <span class="project-tag">Spatial Economics · Workforce Analysis</span>
+            <span class="project-tag tag-amber">Live app</span>
+          </div>
+          <h3>Riverside County Business<br />Intelligence Dashboard</h3>
+        </div>
+        <div class="project-body">
+          <div class="project-description">
+            <p>
+              A five-panel Plotly Dash application analyzing ~650,000 jobs across
+              Riverside County at the Census tract level — integrating LEHD LODES 8
+              origin-destination job flows with Census ACS demographics to answer
+              questions that matter to regional planners: where are the employment
+              clusters, which cities export workers to LA and Orange counties, and
+              which tracts have the biggest gap between resident need and local
+              job availability?
+            </p>
+            <p>
+              Shift-share analysis revealed Transportation &amp; Warehousing (LQ 2.04)
+              and Construction (LQ 1.89) as Riverside's competitive concentrations,
+              while Professional Services and Finance remain structurally underrepresented
+              — an economic diversification signal. Global Moran's I of 0.247 confirmed
+              significant spatial clustering of employment. Deployed via Docker on
+              Hugging Face Spaces; outputs also include a Folium multi-layer map
+              and a GeoJSON export ready for ArcGIS Online.
+            </p>
+            <div class="project-stack">Python · Plotly Dash · GeoPandas · PySAL · LEHD LODES 8 · Census ACS · Folium · ArcGIS Online · Docker</div>
+          </div>
+          <div class="project-links">
+            <a href="https://huggingface.co/spaces/darthsuvius/rv-bi-dashboard" target="_blank" class="project-link">
+              Live app ↗
+            </a>
+            <a href="https://github.com/Suvamp/riverside-county-business-intelligence-dashboard" target="_blank" class="project-link">
               GitHub ↗
             </a>
           </div>
