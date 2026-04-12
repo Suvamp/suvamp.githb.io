@@ -110,18 +110,20 @@
           </div>
         </div>
 
-        <div class="table-row fade-in" data-category="geospatial">
+        <div class="table-row fade-in" data-category="geospatial ml">
           <div class="table-meta">
-            <span class="table-tag">GIS · Flood Risk</span>
+            <span class="table-tag">Spatial ML · Emergency Mgmt</span>
+            <span class="table-tag tag-amber">Live dashboard</span>
           </div>
           <div class="table-content">
-            <h3>Urban Flood Risk Assessment — Harris County, TX</h3>
-            <p>Flood risk analysis integrating elevation, land use, and hydrological data to identify high-risk zones and vulnerable populations for emergency planning.</p>
-            <div class="table-stack">ArcGIS Pro · Spatial Analysis · Python</div>
+            <h3>Flood Risk Intelligence Dashboard — Harris County, TX</h3>
+            <p>End-to-end spatial ML pipeline across 2,830 block groups: FEMA NFHL flood zones, USGS 3DEP elevation, NLCD impervious surface, NHD waterways, and Census ACS demographics fed into a Random Forest classifier (R² 0.9585) with SHAP explainability per block group. Global Moran's I of 0.3916 confirmed clustering along the Buffalo Bayou corridor. High-risk tracts carry a poverty rate 2.5× that of low-risk tracts. Deployed via FastAPI + ArcGIS Maps SDK on Render.</p>
+            <div class="table-stack">Python · scikit-learn · SHAP · FastAPI · ArcGIS Maps SDK 4.29 · GeoPandas · PySAL · Folium · FEMA NFHL · USGS 3DEP</div>
           </div>
           <div class="table-links">
-            <a href="https://suvamp.github.io/urban-flood-risk-harris-county/outputs/flood_vulnerability_harris_county.html" target="_blank">Live map ↗</a>
-            <a href="https://github.com/Suvamp/urban-flood-risk-harris-county" target="_blank">GitHub ↗</a>
+            <a href="https://flood-risk-dashboard-wdjy.onrender.com/" target="_blank">Dashboard ↗</a>
+            <a href="https://suvamp.github.io/urban-flood-risk-harris-county/outputs/flood_vulnerability_harris_county.html" target="_blank" style="display:block;margin-top:8px">Folium map ↗</a>
+            <a href="https://github.com/Suvamp/urban-flood-risk-harris-county" target="_blank" style="display:block;margin-top:8px">GitHub ↗</a>
           </div>
         </div>
 
@@ -138,6 +140,22 @@
           <div class="table-links">
             <a href="https://drive.google.com/file/d/1-9dDOX4KlTbAX_Nhvs55E2ekhkO6lzM5/view" target="_blank">Site Map ↗</a>
             <a href="https://github.com/Suvamp/ev-charging-suitability-ca" target="_blank">GitHub ↗</a>
+          </div>
+        </div>
+
+        <div class="table-row fade-in" data-category="geospatial ml">
+          <div class="table-meta">
+            <span class="table-tag">Spatial Economics · Workforce</span>
+            <span class="table-tag tag-amber">Live app</span>
+          </div>
+          <div class="table-content">
+            <h3>Riverside County Business Intelligence Dashboard</h3>
+            <p>Five-panel Plotly Dash app analyzing ~650,000 jobs across Riverside County: LEHD LODES 8 origin-destination flows + Census ACS demographics at the tract level. Modules cover employment density + LISA clustering (Moran's I 0.247), commuter inflow/outflow by city, shift-share analysis (Transportation LQ 2.04, Construction LQ 1.89), and an opportunity gap composite score identifying underserved tracts. Deployed via Docker on Hugging Face Spaces; includes Folium multi-layer map and ArcGIS Online GeoJSON export.</p>
+            <div class="table-stack">Python · Plotly Dash · GeoPandas · PySAL · LEHD LODES 8 · Census ACS · Folium · ArcGIS Online · Docker</div>
+          </div>
+          <div class="table-links">
+            <a href="https://huggingface.co/spaces/darthsuvius/rv-bi-dashboard" target="_blank">Live app ↗</a>
+            <a href="https://github.com/Suvamp/riverside-county-business-intelligence-dashboard" target="_blank" style="display:block;margin-top:8px">GitHub ↗</a>
           </div>
         </div>
 
